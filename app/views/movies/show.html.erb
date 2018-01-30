@@ -7,12 +7,12 @@
 
 <p>
   <strong>Poster:</strong>
-  <%= @movie.poster %>
+  <%= image_tag(@movie.poster, :size => "100x100") %>
 </p>
 
 <p>
   <strong>Trailer:</strong>
-  <%= @movie.trailer %>
+  <%= sanitize @movie.trailer, tag => ['iframe']%>
 </p>
 
 <p>
